@@ -13,7 +13,10 @@ os.chdir(image_folder)
 
 while True:
     for file in os.listdir():
-        seconds = 5
+        
+        # 30 mins = 1800 seconds
+        # TODO: maybe make this into minutes using mathematical operations?
+        seconds = 1800
         image = Image.open(file)
         # Displays image
         image.show()
