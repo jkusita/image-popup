@@ -16,12 +16,16 @@ while True:
         
         # 30 mins = 1800 seconds
         # TODO: maybe make this into minutes using mathematical operations?
-        seconds = 1800
-        image = Image.open(file)
-        # Displays image
-        image.show()
-
-        # Display the time left.
+        seconds = 3 
+        # This is needed in case DSfile shows up in folder
+        try:
+            image = Image.open(file)
+            # Displays image
+            image.show()
+        except OSError:
+            pass
+        
+        # Display the time left.1,800
         while seconds != 0:
             print(seconds)  
             seconds -= 1
@@ -33,4 +37,7 @@ while True:
             if proc.name() == "Preview":
                 proc.kill()
             
-    
+        print(os.listdir()) # for testing
+        # TODO: make a try for OSError, put comments on it describing for dstore etc
+
+# TODO: experiment by putting the image in the folder and see if the program updates it.
