@@ -37,7 +37,4 @@ while True:
             if proc.name() == "Preview":
                 proc.kill()
             
-        print(os.listdir()) # for testing
-        # TODO: make a try for OSError, put comments on it describing for dstore etc
 
-# TODO: experiment by putting the image in the folder and see if the program updates it.
